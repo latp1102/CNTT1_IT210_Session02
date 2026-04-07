@@ -17,6 +17,6 @@
         Password: <input type="password" name="password" />
         <button>Login</button>
     </form>
-    <p style="color: red">${error}</p>
+    <p style="color: red">${lôi}</p>
 </body>
 </html>
