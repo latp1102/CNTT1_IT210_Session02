@@ -42,4 +42,26 @@ public class AuthService {
                 .mapToDouble(Employee::getSalary)
                 .sum();
     }
+    
+    public boolean login(String username, String password) {
+        // Hardcode 2 tài khoan theo yêu câu bài 5
+        if ("hr_manager".equals(username) && "hr123".equals(password)) {
+            return true;
+        }
+        if ("hr_staff".equals(username) && "staff456".equals(password)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public String role(String username) {
+        // Phân quyên theo yêu câu bài 5
+        if ("hr_manager".equals(username)) {
+            return "hr_manager";
+        }
+        if ("hr_staff".equals(username)) {
+            return "hr_staff";
+        }
+        return "unknown";
+    }
 }

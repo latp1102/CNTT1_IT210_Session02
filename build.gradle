@@ -22,22 +22,14 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-webmvc:6.1.5'
-    implementation 'org.springframework:spring-context:6.1.5'
-
     compileOnly('jakarta.servlet:jakarta.servlet-api:6.1.0')
 
     // Source: https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-//    implementation("org.springframework:spring-webmvc:7.0.6")
+    implementation("org.springframework:spring-webmvc:7.0.6")
     // Source: https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
     implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.2")
     // Source: https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl
     runtimeOnly("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
-
-//    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
-    // Source: https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-//    implementation("org.springframework:spring-webmvc:5.3.39")
-//    implementation 'javax.servlet:jstl:1.2'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
