@@ -34,6 +34,6 @@ public class EmployeeController {
         checkLogin(session);
         model.addAttribute("emp",
                 service.findByCode(code));
-        return "employee-detail";
+        return "b5/employee-detail";
     }
 }
